@@ -8,6 +8,10 @@ selenium_tests:
   before_script:
     - apt-get update
     - apt-get install -y chromium chromium-driver
+    - which chromium
+    - which chromedriver
+    - chromium --version
+    - chromedriver --version
     - npm install
   script:
     - npm test
