@@ -1,0 +1,13 @@
+image: node:18
+
+stages:
+  - test
+
+selenium_tests:
+  stage: test
+  before_script:
+    - apt-get update
+    - apt-get install -y chromium chromium-driver
+    - npm install
+  script:
+    - npm test
